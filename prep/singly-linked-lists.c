@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct samples {
-	struct samples *next;
+struct node {
+	struct node *next;
 	int value;
 };
 
 int main() {
-	struct samples *head = NULL;
-	struct samples *new = NULL;
-	struct samples *end = NULL;
-	struct samples *currentNode = NULL;
-	struct samples *nodeToDelete = NULL;
+	struct node *head = NULL;
+	struct node *new = NULL;
+	struct node *end = NULL;
+	struct node *currentNode = NULL;
+	struct node *nodeToDelete = NULL;
 
 	// Add first node to empty list
-	new = (struct samples*) malloc(sizeof(struct samples));
+	new = (struct node*) malloc(sizeof(struct node));
 	new->next = NULL;
 	new->value = 42;
 
@@ -27,7 +27,7 @@ int main() {
 
 
 	// Add new node to head
-	new = (struct samples*) malloc(sizeof(struct samples));
+	new = (struct node*) malloc(sizeof(struct node));
 	new->next = NULL;
 	new->value = 24;
 
@@ -40,7 +40,7 @@ int main() {
 
 
 	// Add to the end of linked list using while loop.
-	new = (struct samples*) malloc(sizeof(struct samples));
+	new = (struct node*) malloc(sizeof(struct node));
 	new->next = NULL;
 	new->value = 1;
 
@@ -73,7 +73,7 @@ int main() {
 
 
 	// Add new node to beginning of linked list
-	new = (struct samples*) malloc(sizeof(struct samples));
+	new = (struct node*) malloc(sizeof(struct node));
 	new->next = NULL;
 	new->value = 4;
 
@@ -92,7 +92,7 @@ int main() {
 	// Add a node to somewhere in the middle of a list
 	// We must first determine where we want to place the node in the list
 	// We'll place it after 42 in the list
-	new = (struct samples*) malloc(sizeof(struct samples));
+	new = (struct node*) malloc(sizeof(struct node));
 	new->next = NULL;
 	new->value = 18;
 
