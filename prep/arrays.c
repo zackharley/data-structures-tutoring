@@ -9,16 +9,18 @@ int main() {
 	int arrayTwo[4];
 	int matrix[3][3];
 
+	printf("%08x\n\n", arrayOne);
+
 	// Print memory addresses of 
 	for(i = 0; i < 5; i++) {
 		// BE CAREFUL!! i is not the integer stored in the array! It is the index in the for loop!
-		printf("Address of integer %d in arrayOne: %08x\n", i, &arrayOne[i]);
+		printf("Address of index %d in arrayOne: %08x\n", i, &arrayOne[i]);
 	}
 
 	printf("\n");
 
 	for(i = 0; i < 4; i++) {
-		printf("Address of integer %d in arrayTwo: %08x\n", i, &arrayTwo[i]);
+		printf("Address of index %d in arrayTwo: %08x\n", i, &arrayTwo[i]);
 	}
 
 	printf("\n");
